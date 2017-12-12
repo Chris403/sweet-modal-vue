@@ -153,6 +153,12 @@
 				type: [Number, String],
 				required: false,
 				default: null
+			},
+			
+			isAlert: {
+				type: Boolean,
+				required: false,
+				default: false
 			}
 		},
 
@@ -226,7 +232,7 @@
 						'has-icon': this.icon,
 						'is-mobile-fullscreen': this.enableMobileFullscreen,
 						'is-visible': this.visible,
-						'is-alert': (this.icon && !this.has_tabs) || (!this.icon && !this.title && !this.$slots.title),
+						'is-alert': this.isAlert,
 						bounce: this.is_bouncing,
 					}
 				]
